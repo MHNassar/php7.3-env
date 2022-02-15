@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+
+  php7_dev_env:
+    build:
+      context: ./Docker/php
+    container_name: php7_dev_env
+    working_dir: /src
+    volumes:
+      - ./src:/src
+      - ${HOME}/.ssh:/root/.ssh:ro
